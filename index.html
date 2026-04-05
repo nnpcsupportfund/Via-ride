@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Payment</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    background: #f2f2f7;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header img.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #111;
+}
+
+/* Container */
+.container {
+    max-width: 420px;
+    margin: 20px auto 40px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.cash { background: #d9f2c2; }
+.card { background: #e5e5e5; }
+.paypal { background: #f0f4ff; }
+.gift { background: #e5e5e5; }
+
+.arrow { color: #aaa; font-size: 20px; }
+
+.option:hover {
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+</style>
+
+<script>
+function notAvailable(){
+    alert("Not available");
+}
+function goCard(){
+    window.location.href = "card.html";
+}
+</script>
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <img src="https://img.icons8.com/ios-filled/50/000000/car.png" alt="Viaride Logo" class="logo">
+    <h2>Viaride</h2>
+</header>
+
+<div class="container">
+    <h1>Add a payment method</h1>
+
+    <div class="option" onclick="notAvailable()">
+        <div class="left">
+            <div class="icon cash">💵</div>
+            <div>Cash</div>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="option" onclick="goCard()">
+        <div class="left">
+            <div class="icon card">💳</div>
+            <div>Credit or debit card</div>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="option" onclick="notAvailable()">
+        <div class="left">
+            <div class="icon paypal">P</div>
+            <div>PayPal</div>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+
+    <div class="option" onclick="notAvailable()">
+        <div class="left">
+            <div class="icon gift">🎁</div>
+            <div>Gift card</div>
+        </div>
+        <div class="arrow">›</div>
+    </div>
+</div>
+
+</body>
+</html>
